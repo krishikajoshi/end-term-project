@@ -4,9 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 
 import Auth from './Auth';
-import Dashboard from './Dashboard';git add .
-git commit -m "fix: removed old pages imports"
-git push
+import Dashboard from './Dashboard';
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
