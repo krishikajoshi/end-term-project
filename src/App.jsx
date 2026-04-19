@@ -5,6 +5,7 @@ import { auth } from './firebase';
 
 import Auth from './Auth';
 import Dashboard from './Dashboard';
+
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,22 +37,10 @@ function App() {
           element={user ? <Navigate to="/dashboard" /> : <Auth />} 
         />
 
-        {/* HABITS */}
+        {/* DASHBOARD */}
         <Route 
           path="/dashboard" 
           element={user ? <Dashboard /> : <Navigate to="/" />} 
-        />
-
-        {/* SESSIONS */}
-        <Route 
-          path="/sessions" 
-          element={user ? <Sessions /> : <Navigate to="/" />} 
-        />
-
-        {/* REPORTS */}
-        <Route 
-          path="/reports" 
-          element={user ? <Reports /> : <Navigate to="/" />} 
         />
 
       </Routes>
